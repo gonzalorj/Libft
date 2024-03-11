@@ -1,34 +1,27 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_memmove.c                                       :+:      :+:    :+:   */
+/*   ft_strlcpy.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: gorodrig <gorodrig@student.42campus>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/03/11 14:43:42 by gorodrig          #+#    #+#             */
-/*   Updated: 2024/03/11 16:38:19 by gorodrig         ###   ########.fr       */
+/*   Created: 2024/03/11 16:40:33 by gorodrig          #+#    #+#             */
+/*   Updated: 2024/03/11 16:51:08 by gorodrig         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-void	*ft_memmove(void *dest, const void *src, size_t n)
+size_t strlcpy(char *dest, const char *src, size_t n)
 {
-	char		*dest_ptr;
-	const char	*src_ptr;
+	unsigned int i;
 
-	dest_ptr = (char *)dest;
-	src_ptr = (const char *)src;
-	if (dest_ptr < src_ptr)
+	i = 0;
+	while (src[i] && i < n - 1)
 	{
-		while (n--)
-		{
-			dest_ptr[n] = src_ptr[n];
-		}
+		dest[i] = src[i];
+		i++;
 	}
-	else
-	{
-		ft_memcpy(dest, src, n);
-	}
+	dest[i] = '\0';
 	return (dest);
 }

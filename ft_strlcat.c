@@ -1,34 +1,31 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_memmove.c                                       :+:      :+:    :+:   */
+/*   ft_strlcat.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: gorodrig <gorodrig@student.42campus>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/03/11 14:43:42 by gorodrig          #+#    #+#             */
-/*   Updated: 2024/03/11 16:38:19 by gorodrig         ###   ########.fr       */
+/*   Created: 2024/03/11 16:52:00 by gorodrig          #+#    #+#             */
+/*   Updated: 2024/03/11 17:06:51 by gorodrig         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-void	*ft_memmove(void *dest, const void *src, size_t n)
+size_t strlcat(char *dest, const char *src, size_t n)
 {
-	char		*dest_ptr;
-	const char	*src_ptr;
+	int i;
+	int p;
 
-	dest_ptr = (char *)dest;
-	src_ptr = (const char *)src;
-	if (dest_ptr < src_ptr)
+	i = 0;
+	while(dest[i])
 	{
-		while (n--)
-		{
-			dest_ptr[n] = src_ptr[n];
-		}
+		i++;
 	}
-	else
+	while(src[p] && i < n)
 	{
-		ft_memcpy(dest, src, n);
+		dest[i] = src[p];
+		i++;
+		p++;
 	}
-	return (dest);
 }
