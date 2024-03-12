@@ -6,11 +6,11 @@
 /*   By: gorodrig <gorodrig@student.42campus>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/03/11 11:03:18 by gorodrig          #+#    #+#             */
-/*   Updated: 2024/03/12 15:39:37 by gorodrig         ###   ########.fr       */
+/*   Updated: 2024/03/12 17:53:56 by gorodrig         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-int	isalpha(char c)
+int	isalpha(int c)
 {
 	if ((c >= 'a' && c <= 'z') || (c >= 'A' && c <= 'Z'))
 		return (1);
