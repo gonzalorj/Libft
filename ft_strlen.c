@@ -6,12 +6,12 @@
 /*   By: gorodrig <gorodrig@student.42campus>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/03/11 11:53:09 by gorodrig          #+#    #+#             */
-/*   Updated: 2024/03/11 15:13:13 by gorodrig         ###   ########.fr       */
+/*   Updated: 2024/03/12 15:50:41 by gorodrig         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 #include <stdio.h>
 
-size_t	strlen(const char *str)
+size_t	ft_strlen(const char *str)
 {
 	size_t	i;
 

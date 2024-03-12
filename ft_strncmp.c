@@ -1,28 +1,33 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_memcpy.c                                        :+:      :+:    :+:   */
+/*   ft_strncmp.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: gorodrig <gorodrig@student.42campus>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/03/11 13:37:26 by gorodrig          #+#    #+#             */
-/*   Updated: 2024/03/12 15:43:26 by gorodrig         ###   ########.fr       */
+/*   Created: 2024/03/12 11:48:17 by gorodrig          #+#    #+#             */
+/*   Updated: 2024/03/12 15:51:31 by gorodrig         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-void	*memcpy(void *dest, const void *src, size_t n)
+#include "libft.h"
+
+int	ft_strncmp(const char *str1, const char *str2, size_t n)
 {
-	char			*dest_ptr;
-	const char		*src_ptr;
-	size_t			i;
+	unsigned int	i;
 
 	i = 0;
-	dest_ptr = (char *)dest;
-	src_ptr = (const char *)src;
-	while (i < n)
+	while ((str1[i] || str2[i]) && (i < n))
 	{
-		dest_ptr[i] = src_ptr[i];
+		if (str1[i] > str2[i])
+		{
+			return (1);
+		}
+		else if (str1[i] > str2[i])
+		{
+			return (-1);
+		}
 		i++;
 	}
-	return (dest);
+	return (0);
 }

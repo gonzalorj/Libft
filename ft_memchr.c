@@ -1,28 +1,31 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_memcpy.c                                        :+:      :+:    :+:   */
+/*   ft_memchr.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: gorodrig <gorodrig@student.42campus>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/03/11 13:37:26 by gorodrig          #+#    #+#             */
-/*   Updated: 2024/03/12 15:43:26 by gorodrig         ###   ########.fr       */
+/*   Created: 2024/03/12 11:59:59 by gorodrig          #+#    #+#             */
+/*   Updated: 2024/03/12 15:41:19 by gorodrig         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-void	*memcpy(void *dest, const void *src, size_t n)
+#include "libft.h"
+
+void	*ft_memchr(const void *str, int c, size_t n)
 {
-	char			*dest_ptr;
-	const char		*src_ptr;
 	size_t			i;
+	unsigned char	*string;
+	unsigned char	let;
 
 	i = 0;
-	dest_ptr = (char *)dest;
-	src_ptr = (const char *)src;
-	while (i < n)
+	string = (unsigned char *)str;
+	let = (unsigned char)c;
+	while ((str[i] != let) && i < n)
 	{
-		dest_ptr[i] = src_ptr[i];
+		if (str[i] == '\0')
+			return (NULL);
 		i++;
 	}
-	return (dest);
+	return (str);
 }

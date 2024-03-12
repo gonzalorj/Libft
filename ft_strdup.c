@@ -1,28 +1,29 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_memcpy.c                                        :+:      :+:    :+:   */
+/*   ft_strdup.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: gorodrig <gorodrig@student.42campus>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/03/11 13:37:26 by gorodrig          #+#    #+#             */
-/*   Updated: 2024/03/12 15:43:26 by gorodrig         ###   ########.fr       */
+/*   Created: 2024/03/12 15:17:52 by gorodrig          #+#    #+#             */
+/*   Updated: 2024/03/12 15:47:13 by gorodrig         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-void	*memcpy(void *dest, const void *src, size_t n)
+char	*strdup(const char *src)
 {
-	char			*dest_ptr;
-	const char		*src_ptr;
-	size_t			i;
+	char	*dest;
+	int		n;
+	int		i;
 
 	i = 0;
-	dest_ptr = (char *)dest;
-	src_ptr = (const char *)src;
-	while (i < n)
+	n = ft_strlen(src);
+	dest = (char *)malloc(n + 1);
+	while (src[i])
 	{
-		dest_ptr[i] = src_ptr[i];
+		dest[i] = src[i];
 		i++;
 	}
+	dest[i] = '\0';
 	return (dest);
 }

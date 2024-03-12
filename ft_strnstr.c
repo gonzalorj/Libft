@@ -1,28 +1,37 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_memcpy.c                                        :+:      :+:    :+:   */
+/*   ft_strnstr.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: gorodrig <gorodrig@student.42campus>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/03/11 13:37:26 by gorodrig          #+#    #+#             */
-/*   Updated: 2024/03/12 15:43:26 by gorodrig         ###   ########.fr       */
+/*   Created: 2024/03/12 12:24:36 by gorodrig          #+#    #+#             */
+/*   Updated: 2024/03/12 15:52:18 by gorodrig         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-void	*memcpy(void *dest, const void *src, size_t n)
+#include "libft.h"
+
+char	*ft_strnstr(const char *str, const char *substr, size_t n)
 {
-	char			*dest_ptr;
-	const char		*src_ptr;
-	size_t			i;
+	size_t	i;
+	size_t	p;
 
 	i = 0;
-	dest_ptr = (char *)dest;
-	src_ptr = (const char *)src;
-	while (i < n)
+	p = 0;
+	if (substr[0] == 0)
 	{
-		dest_ptr[i] = src_ptr[i];
+		return ((char *)str);
+	}
+	while (str[i] && i < n)
+	{
+		while (str[i + p] == substr[p] && ((i + j) < n))
+		{
+			p++;
+			if (substr == '\0')
+				return ((char *)str + i);
+		}
 		i++;
 	}
-	return (dest);
+	return (0);
 }

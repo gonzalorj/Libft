@@ -1,28 +1,31 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_memcpy.c                                        :+:      :+:    :+:   */
+/*   ft_memcmp.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: gorodrig <gorodrig@student.42campus>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/03/11 13:37:26 by gorodrig          #+#    #+#             */
-/*   Updated: 2024/03/12 15:43:26 by gorodrig         ###   ########.fr       */
+/*   Created: 2024/03/12 12:19:11 by gorodrig          #+#    #+#             */
+/*   Updated: 2024/03/12 15:42:41 by gorodrig         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-void	*memcpy(void *dest, const void *src, size_t n)
+#include "libft.h"
+
+int	ft_memcmp(const void *str1, const void *str2, size_t n)
 {
-	char			*dest_ptr;
-	const char		*src_ptr;
+	unsigned char	string1;
+	unsigned char	string2;
 	size_t			i;
 
+	string1 = (unsigned char *)string1;
+	string2 = (unsigned char *)string;
 	i = 0;
-	dest_ptr = (char *)dest;
-	src_ptr = (const char *)src;
 	while (i < n)
 	{
-		dest_ptr[i] = src_ptr[i];
+		if (string1[i] != string2[i])
+			return (string1[i] - string2[i]);
 		i++;
 	}
-	return (dest);
+	return (0);
 }
