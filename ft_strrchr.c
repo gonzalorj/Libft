@@ -6,13 +6,13 @@
 /*   By: gorodrig <gorodrig@student.42campus>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/03/12 11:22:57 by gorodrig          #+#    #+#             */
-/*   Updated: 2024/03/12 15:52:47 by gorodrig         ###   ########.fr       */
+/*   Updated: 2024/03/13 15:53:30 by gorodrig         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-char	*ft_strrchr(char *str, int c)
+char	*ft_strrchr(const char *str, int c)
 {
 	unsigned int	str_len;
 	unsigned char	b;

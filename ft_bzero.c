@@ -6,9 +6,11 @@
 /*   By: gorodrig <gorodrig@student.42campus>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/03/11 13:15:02 by gorodrig          #+#    #+#             */
-/*   Updated: 2024/03/12 18:27:55 by gorodrig         ###   ########.fr       */
+/*   Updated: 2024/03/13 12:50:21 by gorodrig         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
+
+#include "libft.h"
 
 void	ft_bzero(void *s, size_t n)
 {

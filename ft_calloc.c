@@ -6,7 +6,7 @@
 /*   By: gorodrig <gorodrig@student.42campus>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/03/12 13:32:27 by gorodrig          #+#    #+#             */
-/*   Updated: 2024/03/12 15:38:15 by gorodrig         ###   ########.fr       */
+/*   Updated: 2024/03/13 12:52:50 by gorodrig         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,9 +16,9 @@ void	*ft_calloc(size_t nitems, size_t size)
 {
 	void	*final_size;
 
-	final_size = (int)malloc(nitems * size);
+	final_size = malloc(nitems * size);
 	if (final_size == NULL)
 		return (final_size);
-	ft_bzero(final_size, nitems * count);
+	ft_bzero(final_size, nitems * size);
 	return (final_size);
 }

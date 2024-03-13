@@ -1,28 +1,18 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_memset.c                                        :+:      :+:    :+:   */
+/*   ft_strjoin.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: gorodrig <gorodrig@student.42campus>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/03/13 14:15:45 by gorodrig          #+#    #+#             */
-/*   Updated: 2024/03/13 14:15:47 by gorodrig         ###   ########.fr       */
+/*   Created: 2024/03/13 16:54:39 by gorodrig          #+#    #+#             */
+/*   Updated: 2024/03/13 17:10:57 by gorodrig         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft.h"
-
-void	*ft_memset(void *str, int c, size_t n)
+char *ft_strjoin(const char str1, const char str2)
 {
-	size_t			i;
-	unsigned char	*copy;
+	char *cap;
 
-	i = 0;
-	copy = (unsigned char *)str;
-	while (i < n)
-	{
-		copy[i] = (unsigned char)c;
-		i++;
-	}
-	return (copy);
+	cap = (char *)malloc(sizeof(char *) * ((str1 + str2) + 1));
 }

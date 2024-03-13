@@ -6,7 +6,7 @@
 /*   By: gorodrig <gorodrig@student.42campus>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/03/12 12:24:36 by gorodrig          #+#    #+#             */
-/*   Updated: 2024/03/12 15:52:18 by gorodrig         ###   ########.fr       */
+/*   Updated: 2024/03/13 15:48:40 by gorodrig         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,7 +25,7 @@ char	*ft_strnstr(const char *str, const char *substr, size_t n)
 	}
 	while (str[i] && i < n)
 	{
-		while (str[i + p] == substr[p] && ((i + j) < n))
+		while (str[i + p] == substr[p] && ((i + p) < n))
 		{
 			p++;
 			if (substr == '\0')

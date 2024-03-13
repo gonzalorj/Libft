@@ -6,7 +6,7 @@
 /*   By: gorodrig <gorodrig@student.42campus>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/03/11 15:34:43 by gorodrig          #+#    #+#             */
-/*   Updated: 2024/03/12 17:58:45 by gorodrig         ###   ########.fr       */
+/*   Updated: 2024/03/13 16:50:51 by gorodrig         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,7 +18,7 @@
 
 int		ft_atoi(const char *str);
 void	ft_bzero(void *s, size_t n);
-void	ft_calloc(size_t nitems, size_t size);
+void	*ft_calloc(size_t nitems, size_t size);
 int		isalnum(int c);
 int		isalpha(int c);
 int		isascii(int c);
@@ -39,5 +39,6 @@ char	*ft_strnstr(const char *str, const char *substr, size_t n);
 char	*ft_strrchr(char *str, int c);
 int		ft_tolower(char c);
 int		ft_toupper(char c);
+char	*ft_substr(const char *str, unsigned int start, size_t len);
 
 #endif

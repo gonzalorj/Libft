@@ -6,15 +6,17 @@
 /*   By: gorodrig <gorodrig@student.42campus>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/03/12 15:17:52 by gorodrig          #+#    #+#             */
-/*   Updated: 2024/03/12 15:47:13 by gorodrig         ###   ########.fr       */
+/*   Updated: 2024/03/13 14:25:40 by gorodrig         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-char	*strdup(const char *src)
+#include "libf.h"
+
+char	*ft_strdup(const char *src)
 {
 	char	*dest;
-	int		n;
-	int		i;
+	size_t	n;
+	size_t	i;
 
 	i = 0;
 	n = ft_strlen(src);
