@@ -6,34 +6,34 @@
 /*   By: gorodrig <gorodrig@student.42campus>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/03/13 15:56:52 by gorodrig          #+#    #+#             */
-/*   Updated: 2024/03/13 16:53:05 by gorodrig         ###   ########.fr       */
+/*   Updated: 2024/03/15 12:34:00 by gorodrig         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-char *ft_substr(const char *str, unsigned int start, size_t len)
+char	*ft_substr(const char *str, unsigned int start, size_t len)
 {
 	char	*cap;
 	size_t	i;
 	size_t	p;
 
-	cap = (char*)malloc(sizeof(char) * (len + 1));
+	cap = (char *)malloc(sizeof(char ) * (len + 1));
 	i = 0;
 	p = 0;
-	if(!str)
+	if (!str)
 	{
-		return(NULL);	
+		return (NULL);
 	}
-	while(str[i])
+	while (str[i])
 	{
 		if (i >= start && p < len)
 		{
-			cap[p] = str[i]
+			cap[p] = str[i];
 			p++;
 		}
 		i++;
 	}
 	cap[j] = '\0';
-	return(cap);
+	return (cap);
 }

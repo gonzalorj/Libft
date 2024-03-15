@@ -1,39 +1,27 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strnstr.c                                       :+:      :+:    :+:   */
+/*   ft_strtrim.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: gorodrig <gorodrig@student.42campus>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/03/12 12:24:36 by gorodrig          #+#    #+#             */
-/*   Updated: 2024/03/15 11:36:50 by gorodrig         ###   ########.fr       */
+/*   Created: 2024/03/15 12:37:11 by gorodrig          #+#    #+#             */
+/*   Updated: 2024/03/15 14:19:34 by gorodrig         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-char	*ft_strnstr(const char *str, const char *substr, size_t n)
+char	*ft_strtrim(const char *str1, const char *set)
 {
-	size_t			i;
-	size_t			p;
-	unsigned char	*string;
-	unsigned char	*to_find;
+	char	*trimmed;
+	size_t	str_len;
 
-	string = (unsigned char *)str;
-	to_find = (unsigned char *)substr;
-	i = 0;
-	p = 0;
-	if (to_find == 0)
+	str_len = ft_strlen(str1);
+
+	if (!trimmed || !str1)
+		return (NULL);
+	while (str1[i])
 	{
-		return (str);
 	}
-	while (str[i] && i < n)
-	{
-		while (str[i + p] == substr[p])
-			p++;
-		if (to_find[p] == '\0')
-			return (str + i);
-		i++;
-	}
-	return (0);
 }
