@@ -12,13 +12,13 @@
 
 #include "libft.h"
 
-char	*ft_substr(const char *str, unsigned int start, size_t len)
+char *ft_substr(const char *str, unsigned int start, size_t len)
 {
-	char	*cap;
-	size_t	i;
-	size_t	p;
+	char *cap;
+	size_t i;
+	size_t p;
 
-	cap = (char *)malloc(sizeof(char ) * (len + 1));
+	cap = (char *)malloc(sizeof(char) * (len + 1));
 	i = 0;
 	p = 0;
 	if (!str)
@@ -34,6 +34,6 @@ char	*ft_substr(const char *str, unsigned int start, size_t len)
 		}
 		i++;
 	}
-	cap[j] = '\0';
+	cap[p] = '\0';
 	return (cap);
 }
