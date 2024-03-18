@@ -23,7 +23,7 @@ char *ft_strtrim(const char *str1, const char *set)
 	while (ft_strchr(set, str1[start_size]) && str1[start_size])
 		start_size++;
 	end_size = ft_strlen(str1);
-	while (ft_strchr(set, str1[end_size] && end_size != 0))
+	while (end_size != 0 && ft_strchr(set, str1[end_size - 1]))
 		end_size--;
-	return (ft_substr((char *)str1, start_size, end_size + 1));
+	return (ft_substr(str1, start_size, end_size - start_size));
 }
