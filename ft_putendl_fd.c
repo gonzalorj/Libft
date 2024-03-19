@@ -1,6 +1,6 @@
 #include "libft.h"
 
-void ft_end_fd(char *s, int fd)
+void ft_putend_fd(char *s, int fd)
 {
 	size_t i;
 

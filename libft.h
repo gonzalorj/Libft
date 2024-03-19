@@ -43,5 +43,13 @@ int ft_tolower(char c);
 int ft_toupper(char c);
 char *ft_substr(const char *str, unsigned int start, size_t len);
 char *ft_strtrim(const char *str1, const char *set);
+void ft_putnbr_fd(int n, int fd);
+void ft_putstr_fd(char *s, int fd);
+void ft_putend_fd(char *s, int fd);
+void ft_putchar_fd(char c, int fd);
+char **ft_split(char const *s, char c);
+char *ft_itoa(int n);
+char *ft_strmapi(char const *s, char (*f)(unsigned int, char));
+void ft_striteri(char *s, void (*f)(unsigned int, char *));
 
 #endif
