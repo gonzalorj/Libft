@@ -1,10 +1,20 @@
-#include "libft.h"
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   ft_itoa.c                                          :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: gorodrig <gorodrig@student.42campus>       +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2024/03/20 09:31:49 by gorodrig          #+#    #+#             */
+/*   Updated: 2024/03/20 09:35:50 by gorodrig         ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
 
 #include "libft.h"
 
-static int ft_len_num(int n)
+static int	ft_len_num(int n)
 {
-	int i;
+	int	i;
 
 	i = 1;
 	if (n < 0)
@@ -20,10 +30,10 @@ static int ft_len_num(int n)
 	return (i);
 }
 
-char *ft_itoa(int n)
+char	*ft_itoa(int n)
 {
-	char *str;
-	int len;
+	char	*str;
+	int		len;
 
 	if (n == -2147483648)
 		return (ft_strdup("-2147483648"));

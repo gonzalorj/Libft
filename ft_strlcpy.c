@@ -6,7 +6,7 @@
 /*   By: gorodrig <gorodrig@student.42campus>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/03/11 16:40:33 by gorodrig          #+#    #+#             */
-/*   Updated: 2024/03/13 15:45:18 by gorodrig         ###   ########.fr       */
+/*   Updated: 2024/03/20 15:55:06 by gorodrig         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,7 +14,7 @@
 
 size_t	strlcpy(char *dest, const char *src, size_t n)
 {
-	unsigned int	i;
+	size_t	i;
 
 	i = 0;
 	while (src[i] && i < n - 1)
@@ -23,5 +23,5 @@ size_t	strlcpy(char *dest, const char *src, size_t n)
 		i++;
 	}
 	dest[i] = '\0';
-	return (dest);
+	return (i);
 }

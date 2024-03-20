@@ -6,7 +6,7 @@
 /*   By: gorodrig <gorodrig@student.42campus>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/03/11 13:37:26 by gorodrig          #+#    #+#             */
-/*   Updated: 2024/03/13 14:26:13 by gorodrig         ###   ########.fr       */
+/*   Updated: 2024/03/20 14:36:28 by gorodrig         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,6 +26,5 @@ void	*ft_memcpy(void *dest, const void *src, size_t n)
 		dest_ptr[i] = src_ptr[i];
 		i++;
 	}
-	dest_ptr[i] = '\0';
 	return (dest);
 }

@@ -6,7 +6,7 @@
 /*   By: gorodrig <gorodrig@student.42campus>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/03/12 11:59:59 by gorodrig          #+#    #+#             */
-/*   Updated: 2024/03/13 13:26:31 by gorodrig         ###   ########.fr       */
+/*   Updated: 2024/03/20 12:04:47 by gorodrig         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,7 +24,7 @@ void	*ft_memchr(const void *str, int c, size_t n)
 	while (i < n)
 	{
 		if (string[i] == let)
-			return (str + i);
+			return (string + i);
 		i++;
 	}
 	return (NULL);
