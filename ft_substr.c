@@ -6,7 +6,7 @@
 /*   By: gorodrig <gorodrig@student.42campus>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/03/13 15:56:52 by gorodrig          #+#    #+#             */
-/*   Updated: 2024/03/20 10:01:32 by gorodrig         ###   ########.fr       */
+/*   Updated: 2024/03/21 16:20:22 by gorodrig         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,6 +19,8 @@ char	*ft_substr(const char *str, unsigned int start, size_t len)
 	size_t	p;
 
 	cap = (char *)malloc(sizeof(char) * (len + 1));
+	if (!cap)
+		return (NULL);
 	i = 0;
 	p = 0;
 	if (!str)
