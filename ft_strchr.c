@@ -6,7 +6,7 @@
 /*   By: gorodrig <gorodrig@student.42campus>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/03/12 11:15:42 by gorodrig          #+#    #+#             */
-/*   Updated: 2024/03/21 16:05:18 by gorodrig         ###   ########.fr       */
+/*   Updated: 2024/03/26 14:13:53 by gorodrig         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,6 +24,6 @@ char	*ft_strchr(const char *str, int c)
 		str++;
 	}
 	if (ch == '\0')
-		return((char *) str);
-	return(NULL);
+		return ((char *) str);
+	return (NULL);
 }

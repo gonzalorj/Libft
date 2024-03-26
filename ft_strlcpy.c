@@ -6,7 +6,7 @@
 /*   By: gorodrig <gorodrig@student.42campus>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/03/11 16:40:33 by gorodrig          #+#    #+#             */
-/*   Updated: 2024/03/21 09:51:43 by gorodrig         ###   ########.fr       */
+/*   Updated: 2024/03/26 14:22:03 by gorodrig         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,7 +19,7 @@ size_t	ft_strlcpy(char *dest, const char *src, size_t dstsize)
 	i = 0;
 	if (!dstsize)
 	{
-		return(ft_strlen(src));
+		return (ft_strlen(src));
 	}
 	while (i < (dstsize - 1) && src[i])
 	{

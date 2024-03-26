@@ -6,15 +6,15 @@
 /*   By: gorodrig <gorodrig@student.42campus>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/03/12 11:11:50 by gorodrig          #+#    #+#             */
-/*   Updated: 2024/03/20 14:26:08 by gorodrig         ###   ########.fr       */
+/*   Updated: 2024/03/26 15:40:58 by gorodrig         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-int	ft_toupper(char c)
+int	ft_toupper(int c)
 {
-	if (c >= 97 && c <= 122)
+	if (c >= 'a' && c <= 'z')
 		c -= 32;
-	return(c);
+	return (c);
 }
