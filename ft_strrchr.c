@@ -6,7 +6,7 @@
 /*   By: gorodrig <gorodrig@student.42campus>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/03/12 11:22:57 by gorodrig          #+#    #+#             */
-/*   Updated: 2024/03/20 12:42:17 by gorodrig         ###   ########.fr       */
+/*   Updated: 2024/03/26 17:06:12 by gorodrig         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,20 +15,19 @@
 char	*ft_strrchr(const char *str, int c)
 {
 	size_t		i;
-	char		*pos;
-	char		*res;
-	char		ch;
+	char		*rt;
 
-	ch = (unsigned char)c;
-	res = NULL;
+	rt = NULL;
 	i = 0;
 	while (str[i])
 	{
-		if (str[i] == ch)
-			pos = (char *)(str + i);
+		if (str[i] == (char)c)
+		{
+			rt = ((char *)&str[i]);
+		}
 		i++;
 	}
-	if (str[i] == ch)
-		pos = (char *)(str + i);
-	return (pos);
+	if (c == '\0')
+		rt = ((char *)&str[i]);
+	return (rt);
 }

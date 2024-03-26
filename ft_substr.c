@@ -6,7 +6,7 @@
 /*   By: gorodrig <gorodrig@student.42campus>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/03/13 15:56:52 by gorodrig          #+#    #+#             */
-/*   Updated: 2024/03/21 16:20:22 by gorodrig         ###   ########.fr       */
+/*   Updated: 2024/03/26 17:55:46 by gorodrig         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,28 +14,28 @@
 
 char	*ft_substr(const char *str, unsigned int start, size_t len)
 {
-	char	*cap;
+	char	*new;
 	size_t	i;
 	size_t	p;
 
-	cap = (char *)malloc(sizeof(char) * (len + 1));
-	if (!cap)
+	if (!str)
+		return (NULL);
+	new = (char *)malloc((len + 1) * sizeof(char));
+	if (!new)
 		return (NULL);
 	i = 0;
 	p = 0;
 	if (!str)
-	{
 		return (NULL);
-	}
 	while (str[i])
 	{
 		if (i >= start && p < len)
 		{
-			cap[p] = str[i];
+			new[p] = str[i];
 			p++;
 		}
 		i++;
 	}
-	cap[p] = '\0';
-	return (cap);
+	new[p] = '\0';
+	return (new);
 }

@@ -6,12 +6,12 @@
 /*   By: gorodrig <gorodrig@student.42madrid.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/03/20 09:57:36 by gorodrig          #+#    #+#             */
-/*   Updated: 2024/03/26 15:00:56 by gorodrig         ###   ########.fr       */
+/*   Updated: 2024/03/26 17:55:50 by gorodrig         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
-/*
-#include "libft.h"
 
+#include "libft.h"
+/*
 static size_t	ft_str_cnt(const char *str, char c)
 {
 	int		is_word;
@@ -30,7 +30,7 @@ static size_t	ft_str_cnt(const char *str, char c)
 		str++;
 	}
 	return (str_num);
-	if(!str)
+	if (!str)
 		return (0); 
 }
 
@@ -52,14 +52,20 @@ static int ft_mem_possible(char **str_array, int pos, size_t mem)
 	}
 	return (0);
 }
+
 static int	ft_str_arr_cpy(char **str_array, const char *s, char c)
 {
 	int i;
 
 	ft_strlcpy(str_array[i], s, ft_strlen(s + 1)
 }
+*/
 char	**ft_split(const char *s, char c)
 {
+	(void )s;
+	(void )c;
+	return (0);
+	/*
 	size_t	str_num;
 	char	**str_array;
 
@@ -70,4 +76,5 @@ char	**ft_split(const char *s, char c)
 	if (!bi_array)
 		return (NULL);
 	str_array[str_num] = NULL;
-}*/
+	*/
+}
