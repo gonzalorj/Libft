@@ -6,35 +6,35 @@
 /*   By: gorodrig <gorodrig@student.42madrid.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/03/20 09:57:36 by gorodrig          #+#    #+#             */
-/*   Updated: 2024/03/26 17:55:50 by gorodrig         ###   ########.fr       */
+/*   Updated: 2024/03/27 10:24:56 by gorodrig         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
-/*
-static size_t	ft_str_cnt(const char *str, char c)
+
+static size_t	ft_str_cnt(const char *s, char c)
 {
 	int		is_word;
 	size_t	str_num;
 
 	str_num = 0;
-	while (str)
+	if (!s)
+		return (0);
+	while (*s)
 	{
-		if (*str == c)
+		if (*s == c)
 			is_word = 0;
 		else if (is_word == 0)
 		{
 			str_num++;
 			is_word = 1;
 		}
-		str++;
+		s++;
 	}
 	return (str_num);
-	if (!str)
-		return (0); 
 }
 
-static int ft_mem_possible(char **str_array, int pos, size_t mem)
+static int	ft_mem_possible(char **str_array, int pos, size_t mem)
 {
 	int	i;
 
@@ -44,7 +44,7 @@ static int ft_mem_possible(char **str_array, int pos, size_t mem)
 	{
 		while (i < pos)
 		{
-			free(str_arrray[i]);
+			free(str_array[i]);
 			i++;
 		}
 		free(str_array);
@@ -53,19 +53,35 @@ static int ft_mem_possible(char **str_array, int pos, size_t mem)
 	return (0);
 }
 
-static int	ft_str_arr_cpy(char **str_array, const char *s, char c)
+static int	ft_cpy(char **str_array, const char *s, char c)
 {
-	int i;
+	size_t	i;
+	size_t	len;
 
-	ft_strlcpy(str_array[i], s, ft_strlen(s + 1)
+	i = 0;
+	while (*s)
+	{
+		len = 0;
+		while (*s == c && *s)
+			s++;
+		while (*s != c && *s)
+		{
+			len++;
+			s++;
+		}
+		if (len)
+		{
+			if (ft_mem_possible(str_array, i, len + 1))
+				return (1);
+			ft_strlcpy(str_array[i], s - len, len + 1);
+		}
+		i++;
+	}
+	return (0);
 }
-*/
+
 char	**ft_split(const char *s, char c)
 {
-	(void )s;
-	(void )c;
-	return (0);
-	/*
 	size_t	str_num;
 	char	**str_array;
 
@@ -73,8 +89,10 @@ char	**ft_split(const char *s, char c)
 		return (NULL);
 	str_num = ft_str_cnt(s, c);
 	str_array = malloc((str_num + 1) * sizeof(char *));
-	if (!bi_array)
+	if (!str_array)
 		return (NULL);
 	str_array[str_num] = NULL;
-	*/
+	if (ft_cpy(str_array, s, c))
+		return (NULL);
+	return (str_array);
 }
