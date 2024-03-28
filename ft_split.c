@@ -6,7 +6,7 @@
 /*   By: gorodrig <gorodrig@student.42madrid.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/03/20 09:57:36 by gorodrig          #+#    #+#             */
-/*   Updated: 2024/03/27 10:24:56 by gorodrig         ###   ########.fr       */
+/*   Updated: 2024/03/28 13:11:05 by gorodrig         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,6 +18,7 @@ static size_t	ft_str_cnt(const char *s, char c)
 	size_t	str_num;
 
 	str_num = 0;
+	is_word = 0;
 	if (!s)
 		return (0);
 	while (*s)
@@ -87,6 +88,7 @@ char	**ft_split(const char *s, char c)
 
 	if (!s)
 		return (NULL);
+	str_num = 0;
 	str_num = ft_str_cnt(s, c);
 	str_array = malloc((str_num + 1) * sizeof(char *));
 	if (!str_array)
