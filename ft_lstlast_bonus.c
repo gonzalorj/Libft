@@ -1,26 +1,24 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_lstsize.c                                       :+:      :+:    :+:   */
+/*   ft_lstlast_bonus.c                                 :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: gorodrig <gorodrig@student.42madrid.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/03/26 14:04:23 by gorodrig          #+#    #+#             */
-/*   Updated: 2024/03/26 14:08:49 by gorodrig         ###   ########.fr       */
+/*   Created: 2024/03/26 14:04:16 by gorodrig          #+#    #+#             */
+/*   Updated: 2024/04/02 15:44:43 by gorodrig         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-int	ft_lstsize(t_list *lst)
+t_list	*ft_lstlast(t_list *lst)
 {
-	int	i;
-
-	i = 0;
-	while (lst != NULL)
+	if (lst == NULL)
+		return (NULL);
+	while (lst->next != NULL)
 	{
 		lst = lst->next;
-		i++;
 	}
-	return (i);
+	return (lst);
 }
