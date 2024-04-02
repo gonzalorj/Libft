@@ -6,7 +6,7 @@
 #    By: gorodrig <gorodrig@student.42madrid.com    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2024/03/26 14:04:29 by gorodrig          #+#    #+#              #
-#    Updated: 2024/03/26 14:12:40 by gorodrig         ###   ########.fr        #
+#    Updated: 2024/04/02 12:54:15 by gorodrig         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -72,7 +72,7 @@ $(NAME) : $(OBJECTS)
 all: $(NAME) 
 
 bonus : $(OBJECTS) $(BONUS_OBJECTS)
-	ar rc $(NAME) $(BONUS_OBJECTS)
+	@ar rcs $(NAME) $(BONUS_OBJECTS)
 
 %.o : %.c
 	@$(CC) $(CFLAGS) -c -o $@ $^
