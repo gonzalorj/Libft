@@ -39,7 +39,7 @@ void	*ft_memset(void *str, int c, size_t n);
 char	*ft_strchr(const char *str, int c);
 char	*ft_strdup(const char *src);
 char	*ft_strjoin(const char *s1, const char *s2);
-size_t	ft_strlcat(char *dest, const char *src, size_t dstize);
+size_t	ft_strlcat(char *dest, const char *src, size_t dstsize);
 size_t	ft_strlcpy(char *dest, const char *src, size_t dstsize);
 size_t	ft_strlen(const char *str);
 int		ft_strncmp(const char *str1, const char *str2, size_t n);
